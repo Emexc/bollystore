@@ -1,0 +1,79 @@
+import { motion } from 'framer-motion';
+import { ShoppingCartIcon } from '@heroicons/react/24/outline';
+
+const ProductCard = ({ product, index }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      whileHover={{ scale: 1.02 }}
+      className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all"
+    >
+      <div className="aspect-auto w-full">
+        <img 
+          src={product.image} 
+          alt={product.name} 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="p-3 text-center">
+        <p className="font-medium text-gray-800 truncate">{product.name}</p>
+      </div>
+    </motion.div>
+  );
+};
+
+const Products = () => {
+  const products = [
+    {
+      id: 1,
+      name: 'Personal Care',
+      image: 'https://cdn-img.oraimo.com/2024/11/15/pc-cl560.jpg'
+    },
+    {
+      id: 2,
+      name: 'Smart Watch SE',
+      image: 'https://cdn-img.oraimo.com/2024/08/22/670x330-1.jpg'
+    },
+    {
+      id: 3,
+      name: 'Power Bank 10K',
+      image: 'https://cdn-img.oraimo.com/2024/08/22/670x330-2.jpg'
+    },
+    {
+      id: 4,
+      name: 'Home Appliances',
+      image: 'https://cdn-img.oraimo.com/2024/08/22/20240822-161319.jpg'
+    }
+  ];
+
+
+  return (
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+            Oraimo <span className="text-indigo-600">Collection</span>
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Premium quality accessories with authentic warranty
+          </p>
+        </motion.div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {products.map((product, index) => (
+            <ProductCard key={product.id} product={product} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Products;

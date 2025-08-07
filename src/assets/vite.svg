@@ -1,0 +1,22 @@
+<svg width="300" height="100" viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background (optional gradient) -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4ECDC4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Bollystore Text (Stylish & Elegant) -->
+  <text x="20" y="60" font-family="'Montserrat', sans-serif" font-size="40" font-weight="600" fill="url(#gradient)">
+    Bollystore
+  </text>
+  
+  <!-- Optional Decorative Line -->
+  <line x1="20" y1="70" x2="280" y2="70" stroke="url(#gradient)" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- Optional Tagline (smaller text) -->
+  <text x="20" y="85" font-family="'Montserrat', sans-serif" font-size="12" fill="#555">
+    Fashion | Lifestyle | Elegance
+  </text>
+</svg>
