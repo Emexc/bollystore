@@ -2,20 +2,58 @@ import { motion } from 'framer-motion';
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 
 const ProductCard = ({ product, index }) => {
+  // Define affiliate links for each product category
+  const getAffiliateLink = (productName) => {
+    const baseUrl = 'https://ng.oraimo.com';
+    const affiliateCode = '?affiliate_code=8tnqovz0';
+    
+    switch(productName.toLowerCase()) {
+      case 'personal care':
+        return `${baseUrl}/shop-personal-care${affiliateCode}`;
+      case 'smart watch se':
+        return `${baseUrl}/shop-wearables${affiliateCode}`;
+      case 'power bank 10k':
+        return `${baseUrl}/shop-power${affiliateCode}`;
+      case 'home appliances':
+        return `${baseUrl}/shop-home${affiliateCode}`;
+      default:
+        return `${baseUrl}/shop${affiliateCode}`;
+    }
+  };
+
+  const handleClick = () => {
+    window.open(getAffiliateLink(product.name), '_blank');
+  };
+
+  const handleAddToCart = (e) => {
+    e.stopPropagation(); // Prevent triggering the card click
+    // Add your cart functionality here
+    console.log(`Added ${product.name} to cart`);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ scale: 1.02 }}
-      className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all"
+      className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer relative"
+      onClick={handleClick}
     >
-      <div className="aspect-auto w-full">
+      <div className="aspect-auto w-full relative">
         <img 
           src={product.image} 
           alt={product.name} 
           className="w-full h-full object-cover"
+          loading="lazy"
         />
+        <button 
+          onClick={handleAddToCart}
+          className="absolute top-2 right-2 bg-white/90 p-2 rounded-full shadow-md hover:bg-indigo-100 transition-colors"
+          aria-label="Add to cart"
+        >
+          <ShoppingCartIcon className="h-5 w-5 text-gray-700" />
+        </button>
       </div>
       <div className="p-3 text-center">
         <p className="font-medium text-gray-800 truncate">{product.name}</p>
@@ -47,7 +85,6 @@ const Products = () => {
       image: 'https://cdn-img.oraimo.com/2024/08/22/20240822-161319.jpg'
     }
   ];
-
 
   return (
     <section className="py-16 bg-gray-50">

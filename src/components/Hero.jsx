@@ -7,6 +7,19 @@ import {
 } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
 
+const EarbudsIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072M12 6a7.975 7.975 0 015.657 2.343m0 0a7.975 7.975 0 010 11.314m-11.314 0a7.975 7.975 0 010-11.314m0 0a7.975 7.975 0 015.657-2.343" />
+  </svg>
+);
+
+
+const SmartwatchIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+  </svg>
+);
+
 const Hero = () => {
   const navigate = useNavigate();
 
@@ -85,11 +98,11 @@ const Hero = () => {
               <span>Power Banks</span>
             </div>
             <div className="flex items-center gap-2 text-indigo-200">
-              <DevicePhoneMobileIcon className="h-5 w-5" />
+              <EarbudsIcon className="h-5 w-5" />
               <span>Earphones</span>
             </div>
             <div className="flex items-center gap-2 text-indigo-200">
-              <DevicePhoneMobileIcon className="h-5 w-5" />
+              <SmartwatchIcon className="h-5 w-5" />
               <span>Smart Watches</span>
             </div>
           </div>
@@ -159,13 +172,13 @@ const Hero = () => {
               },
               {
                 icon: (
-                  <DevicePhoneMobileIcon className="h-8 w-8 text-indigo-200" />
+                  <EarbudsIcon className="h-8 w-8 text-indigo-200" />
                 ),
                 class: "top-1/4 -right-5",
               },
               {
                 icon: (
-                  <DevicePhoneMobileIcon className="h-8 w-8 text-indigo-400" />
+                  <SmartwatchIcon className="h-8 w-8 text-indigo-400" />
                 ),
                 class: "bottom-10 -left-5",
               },
