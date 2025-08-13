@@ -170,7 +170,7 @@ const Navbar = () => {
           <div className="h-[1000px] md:hidden mt-4 space-y-3 pb-3">
             <Link
               to="/"
-              className="block py-2 hover:text-indigo-200 transition-colors"
+              className="bg-amber-400 block py-2 hover:text-indigo-200 transition-colors"
               onClick={() => {
                 setIsOpen(false);
                 window.scrollTo({ top: 0, behavior: "smooth" });
@@ -190,7 +190,7 @@ const Navbar = () => {
             </Link> */}
             <Link
               to="/deals"
-              className="block py-2 hover:text-indigo-200 transition-colors"
+              className="bg-amber-400 block py-2 hover:text-indigo-200 transition-colors"
               onClick={() => {
                 setIsOpen(false);
                 window.scrollTo({ top: 0, behavior: "smooth" });
@@ -200,7 +200,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/about"
-              className="block py-2 hover:text-indigo-200 transition-colors"
+              className="bg-amber-400 block py-2 hover:text-indigo-200 transition-colors"
               onClick={() => {
                 setIsOpen(false);
                 window.scrollTo({ top: 0, behavior: "smooth" });
@@ -210,7 +210,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/contact"
-              className="block py-2 hover:text-indigo-200 transition-colors"
+              className="bg-amber-400 block py-2 hover:text-indigo-200 transition-colors"
               onClick={() => {
                 setIsOpen(false);
                 window.scrollTo({ top: 0, behavior: "smooth" });
