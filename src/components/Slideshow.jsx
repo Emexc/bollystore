@@ -26,19 +26,19 @@ const FullScreenCarousel = () => {
       mobile: `https://cdn-img.oraimo.com/2025/07/11/oraimo-audio-1.jpg?w=${Math.min(414, windowSize.width)}&h=${Math.round(Math.min(414, windowSize.width) * 1.77)}&fit=crop&q=80&auto=format`,
       desktop: "https://cdn-img.oraimo.com/2025/07/11/oraimo-audio-3.jpg?w=1920&h=1080&fit=crop&q=70&auto=format",
       title: "PREMIUM AUDIO",
-      link: "https://ng.oraimo.com/shop-audio?affiliate_code=8tnqovz0"
+      link: "https://ng.oraimo.com/?affiliate_code=8tnqovz0"
     },
     {
       mobile: `https://cdn-img.oraimo.com/2025/07/11/oraimo-watch-1.jpg?w=${Math.min(414, windowSize.width)}&h=${Math.round(Math.min(414, windowSize.width) * 1.77)}&fit=crop&q=80&auto=format`,
       desktop: "https://cdn-img.oraimo.com/2025/07/11/oraimo-watch-3.jpg?w=1920&h=1080&fit=crop&q=70&auto=format",
       title: "SMART WEARABLES",
-      link: "https://ng.oraimo.com/shop-wearables?affiliate_code=8tnqovz0"
+      link: "https://ng.oraimo.com/?affiliate_code=8tnqovz0"
     },
     {
       mobile: `https://cdn-img.oraimo.com/2025/07/11/oraimo-wireless-earbuds-SpaceBuds-neo-plus-1.jpg?w=${Math.min(414, windowSize.width)}&h=${Math.round(Math.min(414, windowSize.width) * 1.77)}&fit=crop&q=80&auto=format`,
       desktop: "https://cdn-img.oraimo.com/2025/07/11/oraimo-wireless-earbuds-SpaceBuds-neo-plus-1.jpg?w=1920&h=1080&fit=crop&q=70&auto=format",
       title: "WIRELESS EARBUD",
-      link: "https://ng.oraimo.com/shop-earbuds?affiliate_code=8tnqovz0"
+      link: "https://ng.oraimo.com/?affiliate_code=8tnqovz0"
     },
   ];
 
