@@ -17,7 +17,7 @@ const DealCard = ({ deal, index, onClick }) => {
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -5 }}
-      className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-800 to-indigo-900 text-white shadow-2xl hover:shadow-indigo-500/20 transition-all"
+      className="relative overflow-hidden rounded-2xl bg-linear-to-b from-[#8BC53F] to-[#00E5A0] text-white shadow-2xl hover:shadow-indigo-500/20 transition-all"
     >
       {/* Hot deal ribbon */}
       {deal.hot && (
@@ -39,9 +39,9 @@ const DealCard = ({ deal, index, onClick }) => {
         <div className="flex justify-between items-start mb-4">
           <div>
             <span className="text-xs font-semibold text-indigo-300 uppercase tracking-wider flex items-center">
-              <ClockIcon className="h-3 w-3 mr-1" /> {deal.timeLeft}
+              <ClockIcon className="h-3 w-3 mr-1 text-[#000]" /> {deal.timeLeft}
             </span>
-            <h3 className="text-2xl font-bold mt-2">{deal.title}</h3>
+            <h3 className="text-2xl font-bold mt-2 text-amber-400">{deal.title}</h3>
           </div>
           <motion.div
             className="bg-amber-400/90 text-indigo-900 px-4 py-2 rounded-full text-lg font-bold shadow-md"
@@ -58,11 +58,11 @@ const DealCard = ({ deal, index, onClick }) => {
           </motion.div>
         </div>
 
-        <p className="text-indigo-100 mb-6 flex-grow">{deal.description}</p>
+        <p className="text-[#000] mb-6 flex-grow">{deal.description}</p>
 
         <div className="space-y-4 mb-6">
           <motion.div
-            className="bg-indigo-700/50 rounded-xl p-4 backdrop-blur-sm"
+            className="bg-[#000] rounded-xl p-4 backdrop-blur-sm"
             whileHover={{ scale: 1.01 }}
           >
             <div className="flex items-center justify-between">
@@ -112,7 +112,7 @@ const DealCard = ({ deal, index, onClick }) => {
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
-          className="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-indigo-900 py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20"
+          className="w-full bg-linear-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-indigo-900 py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20"
           onClick={(e) => {
             e.stopPropagation();
             onClick(deal.id);
@@ -137,11 +137,11 @@ const PopularDeals = ({ clickedDeals }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="bg-indigo-800/30 rounded-2xl p-6 backdrop-blur-sm border border-indigo-700/50 mt-8"
+      className="bg-linear-to-b from-[#8BC53F] to-[#00E5A0] rounded-2xl p-6 backdrop-blur-sm border border-indigo-700/50 mt-8"
     >
       <div className="flex items-center gap-3 mb-6">
         <ChartBarIcon className="h-6 w-6 text-amber-400" />
-        <h3 className="text-xl font-bold text-white">
+        <h3 className="text-xl font-bold text-[#000]">
           Popular Deals Right Now
         </h3>
       </div>
@@ -165,13 +165,13 @@ const PopularDeals = ({ clickedDeals }) => {
                 <div className="flex-grow">
                   <div className="flex justify-between items-center">
                     <h4 className="font-medium text-white">{deal.title}</h4>
-                    <span className="text-xs text-indigo-300">
+                    <span className="text-xs text-[#000]">
                       {new Date(click.timestamp).toLocaleTimeString()}
                     </span>
                   </div>
                   <div className="flex items-center gap-2 mt-1">
                     <span className="text-xs bg-indigo-700/50 px-2 py-1 rounded-full flex items-center">
-                      <TagIcon className="h-3 w-3 mr-1" /> {deal.code}
+                      <TagIcon className="h-3 w-3 mr-1 text-amber-400" /> {deal.code}
                     </span>
                     <span className="text-xs bg-amber-400/20 text-amber-400 px-2 py-1 rounded-full">
                       {deal.discount}

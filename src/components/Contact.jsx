@@ -64,7 +64,8 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-sm font-medium text-gray-500">Address</h4>
-                    <p className="text-gray-800">No. 12, Oron Road, Uyo, Akwa Ibom, Nigeria</p>
+                    <p className="text-gray-800">No. 18 Spectrum Plaza, First Floor, Otigba Street,</p><br/>
+                    <p className='leading-1'>Ikeja, Lagos State.</p>
                   </div>
                 </div>
                 
@@ -74,7 +75,7 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-sm font-medium text-gray-500">Phone</h4>
-                    <p className="text-gray-800">+234 9023237100</p>
+                    <p className="text-gray-800">+234 818 135 3103</p>
                   </div>
                 </div>
                 
@@ -84,7 +85,9 @@ const Contact = () => {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-sm font-medium text-gray-500">Email</h4>
-                    <p className="text-gray-800">info@bollystore.com</p>
+                    <p className="text-gray-800">care.ng@oraimo.com</p>
+                    <p className="text-gray-800">deliveryissue.ng@oraimo.com</p>
+
                   </div>
                 </div>
               </div>
@@ -97,4 +100,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Contact; 

@@ -6,17 +6,39 @@ import {
   DevicePhoneMobileIcon,
 } from "@heroicons/react/24/outline";
 import { useNavigate } from "react-router-dom";
+import ProductImage from "../assets/smart3.webp"
 
 const EarbudsIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072M12 6a7.975 7.975 0 015.657 2.343m0 0a7.975 7.975 0 010 11.314m-11.314 0a7.975 7.975 0 010-11.314m0 0a7.975 7.975 0 015.657-2.343" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-5 w-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M15.536 8.464a5 5 0 010 7.072M12 6a7.975 7.975 0 015.657 2.343m0 0a7.975 7.975 0 010 11.314m-11.314 0a7.975 7.975 0 010-11.314m0 0a7.975 7.975 0 015.657-2.343"
+    />
   </svg>
 );
 
-
 const SmartwatchIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-5 w-5"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+    />
   </svg>
 );
 
@@ -33,7 +55,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative bg-indigo-700 text-white min-h-screen flex items-center py-20 overflow-hidden">
+    <section className="relative bg-[#8BC53F] text-[#000000] min-h-screen flex items-center py-20 overflow-hidden">
       {/* Animated background elements */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -54,7 +76,7 @@ const Hero = () => {
           className="md:w-1/2 mb-12 md:mb-0"
         >
           <div className="mb-2 flex items-center gap-2">
-            <span className="px-3 py-1 bg-indigo-600 rounded-full text-sm font-medium">
+            <span className="px-3 py-1 bg-[#8BC53F] rounded-full text-sm font-medium">
               New Collection
             </span>
             <span className="flex items-center gap-1 text-indigo-200">
@@ -64,13 +86,14 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="text-indigo-200">Elevate Your</span> <br />
-            <span className="text-white">Tech Experience</span>
+            <span className="text-indigo-200">BollyStore Super Deal: </span>{" "}
+            <br />
+            <span className="text-white">30% Off + Extra 5% Coupon</span>
           </h1>
 
-          <p className="text-xl text-indigo-100 mb-8 max-w-lg">
-            Discover our authentic Oraimo accessories with warranty protection
-            and exclusive member deals.
+          <p className="text-xl text-[#000000] mb-8 max-w-lg">
+            Shop the latest Oraimo electronic accessories with special coupons
+            crafted to help you save more every day..
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -93,15 +116,15 @@ const Hero = () => {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <div className="flex items-center gap-2 text-indigo-200">
+            <div className="flex items-center gap-2 text-[#000000]">
               <DevicePhoneMobileIcon className="h-5 w-5" />
               <span>Power Banks</span>
             </div>
-            <div className="flex items-center gap-2 text-indigo-200">
+            <div className="flex items-center gap-2 text-[#000000]">
               <EarbudsIcon className="h-5 w-5" />
               <span>Earphones</span>
             </div>
-            <div className="flex items-center gap-2 text-indigo-200">
+            <div className="flex items-center gap-2 text-[#000000]">
               <SmartwatchIcon className="h-5 w-5" />
               <span>Smart Watches</span>
             </div>
@@ -109,98 +132,86 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          initial={{ x: 100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="md:w-1/2 flex justify-center relative"
+      initial={{ x: 100, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className="md:w-1/2 flex justify-center relative"
+    >
+      {/* Product showcase container */}
+      <div className="relative w-full max-w-lg">
+        {/* Main product card */}
+        <div 
+          className="relative bg-[#8BC53F] rounded-3xl p-8"
+          style={{ backgroundColor: '#8BC53F' }}
         >
-          {/* Product showcase */}
-          <div className="relative w-full max-w-lg">
-            <div className="relative bg-linear-to-br from-indigo-600 to-indigo-800 rounded-3xl p-8 backdrop-blur-sm border border-indigo-400/20 shadow-2xl shadow-indigo-900/50">
-              <div className="flex flex-col items-center">
-                {/* Main product circle */}
-                <div className="relative mb-8">
-                  <div className="w-64 h-64 bg-indigo-900/50 rounded-full flex items-center justify-center border-2 border-indigo-500/30">
-                    <div className="w-56 h-56 bg-indigo-800 rounded-full flex items-center justify-center">
-                      <SparklesIcon className="h-24 w-24 text-indigo-300 animate-pulse" />
-                    </div>
-                  </div>
-                  <div className="absolute -bottom-3 -right-3 bg-indigo-400 rounded-full p-3 shadow-md">
-                    <ShoppingBagIcon className="h-6 w-6 text-indigo-800" />
-                  </div>
-                </div>
-
-                {/* Product variants */}
-                <div className="flex justify-center gap-4 mb-6">
-                  {["bg-indigo-500", "bg-indigo-400", "bg-indigo-300"].map(
-                    (color, index) => (
-                      <motion.div
-                        key={index}
-                        whileHover={{ y: -5 }}
-                        className={`w-10 h-10 rounded-full ${color} cursor-pointer border-2 border-white/30 shadow-sm`}
-                      />
-                    )
-                  )}
-                </div>
-
-                {/* Discount badge */}
-                <motion.div
-                  className="absolute -top-5 -right-5 bg-amber-400 text-indigo-900 px-4 py-2 rounded-lg shadow-lg font-bold flex items-center gap-1 z-10"
-                  animate={{
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 5, -5, 0],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                  }}
-                >
-                  <SparklesIcon className="h-4 w-4" />
-                  <span>30% OFF</span>
-                </motion.div>
-              </div>
+          <div className="flex flex-col items-center">
+            {/* Main product circle */}
+            <div className="relative mb-8">
+            <motion.img 
+                  src={ProductImage}
+                  alt="Featured Product"
+                  className="w-full h-full object-cover"
+                  whileHover={{ scale: 1.20 }}
+                  transition={{ duration: 0.3 }}
+                />
             </div>
 
-            {/* Floating product icons around the main circle */}
-            {[
-              {
-                icon: (
-                  <DevicePhoneMobileIcon className="h-8 w-8 text-indigo-300" />
-                ),
-                class: "-top-5 left-10",
-              },
-              {
-                icon: (
-                  <EarbudsIcon className="h-8 w-8 text-indigo-200" />
-                ),
-                class: "top-1/4 -right-5",
-              },
-              {
-                icon: (
-                  <SmartwatchIcon className="h-8 w-8 text-indigo-400" />
-                ),
-                class: "bottom-10 -left-5",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className={`absolute ${item.class} bg-indigo-800/80 p-3 rounded-full border border-indigo-400/20 shadow-sm`}
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 3 + index,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut",
-                }}
-              >
-                {item.icon}
-              </motion.div>
-            ))}
+            {/* Product variants */}
+            <div className="flex justify-center gap-4 mb-6">
+              {["bg-green-500", "bg-green-400", "bg-green-300"].map(
+                (color, index) => (
+                  <motion.div
+                    key={index}
+                    whileHover={{ y: -5, scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className={`w-10 h-10 rounded-full ${color} cursor-pointer border-2 border-white/30 shadow-sm transition-colors duration-300`}
+                  />
+                )
+              )}
+            </div>
+
+            {/* Discount badge */}
+            <motion.div
+              className="absolute -top-5 -right-5 bg-amber-400 text-green-900 px-4 py-2 rounded-lg shadow-lg font-bold flex items-center gap-1 z-10"
+              animate={{
+                scale: [1, 1.1, 1],
+                rotate: [0, 5, -5, 0],
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "reverse",
+              }}
+            >
+              <SparklesIcon className="h-4 w-4" />
+              <span>10% OFF</span>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
+
+        {/* Floating product icons around the main circle */}
+        {[
+          
+         
+         
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            className={`absolute ${item.class} bg-green-800/80 p-3 rounded-full border border-green-400/20 shadow-sm`}
+            animate={item.animation}
+            transition={{
+              duration: 4 + index,
+              repeat: Infinity,
+              repeatType: "reverse",
+              ease: "easeInOut",
+            }}
+            whileHover={{ scale: 1.2 }}
+          >
+            {item.icon}
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
       </div>
 
       {/* Scroll indicator */}
@@ -214,12 +225,12 @@ const Hero = () => {
             repeat: Infinity,
             repeatType: "loop",
           }}
-          className="flex flex-col items-center text-indigo-300"
+          className="flex flex-col items-center text-[#000000]"
         >
           <span className="text-sm mb-1">Scroll down</span>
-          <div className="w-5 h-8 border-2 border-indigo-300 rounded-full">
+          <div className="w-5 h-8 border-2 border-[#000000] rounded-full">
             <motion.div
-              className="w-1 h-2 bg-indigo-300 rounded-full mx-auto mt-1"
+              className="w-1 h-2 bg-[#000000] rounded-full mx-auto mt-1"
               animate={{
                 y: [0, 4, 0],
                 opacity: [0.6, 1, 0.6],

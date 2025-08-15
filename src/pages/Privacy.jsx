@@ -152,10 +152,10 @@ const PrivacyPolicy = () => {
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
               <p className="mt-2 text-gray-800">
-                Email: <a href="mailto:privacy@bollystore.com" className="text-indigo-600 hover:text-indigo-800">privacy@bollystore.com</a>
+                Email: <a href="mailto:privacy@bollystore.com" className="text-indigo-600 hover:text-indigo-800">care.ng@oraimo.com</a>
               </p>
               <p className="mt-1 text-gray-800">
-                Address: 123 Privacy Lane, Lagos, Nigeria
+                Address: 18, Spectrum Plaza, First Floor, Otigba Street, Ikeja, Lagos.
               </p>
             </div>
           </div>

@@ -80,19 +80,8 @@ const TermsAndConditions = () => {
       content: (
         <div className="space-y-4">
           <p>
-            Our Return & Refund Policy forms part of these Terms. Please review
-            the policy on our website for complete details.
+            Visit Oraimo Return & Refund Policy <a href="https://ng.oraimo.com/pages/return-refund-policy">here</a>
           </p>
-          <p>Key points include:</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Returns must be made within 14 days of receipt</li>
-            <li>Products must be in original condition with all packaging</li>
-            <li>Refunds will be issued to the original payment method</li>
-            <li>
-              Shipping costs are non-refundable unless the return is due to our
-              error
-            </li>
-          </ul>
         </div>
       ),
     },
@@ -264,11 +253,11 @@ const TermsAndConditions = () => {
                   href="mailto:legal@bollystore.com"
                   className="text-indigo-600 hover:text-indigo-800"
                 >
-                  legal@bollystore.com
+                  care.ng@oraimo.com
                 </a>
               </p>
               <p className="mt-1 text-gray-800">
-                Address: 123 Legal Street, Lagos, Nigeria
+                Address: 18, SPectrum Plaza, First Floor, Otigba street, IKeja, Lagos.
               </p>
             </div>
           </div>

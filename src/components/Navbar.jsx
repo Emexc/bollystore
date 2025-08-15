@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-indigo-800 shadow-lg" : "bg-indigo-700"
+        scrolled ? "bg-[#8BC53F] shadow-lg" : "bg-[#5E8526]"
       }`}
     >
       <div className="container mx-auto px-4 py-3">

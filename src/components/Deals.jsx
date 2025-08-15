@@ -15,7 +15,7 @@ const DealCard = ({ deal, index }) => {
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -5 }}
-      className="relative overflow-hidden rounded-2xl bg-linear-to-br from-indigo-800 to-indigo-900 text-white shadow-2xl hover:shadow-indigo-500/20 transition-all"
+      className="relative overflow-hidden rounded-2xl bg-linear-to-b from-[#8BC53F] to-[#00E5A0] text-white shadow-2xl hover:shadow-indigo-500/20 transition-all"
     >
       {/* Hot deal ribbon */}
       {deal.hot && (
@@ -31,10 +31,10 @@ const DealCard = ({ deal, index }) => {
       <div className="p-6 relative z-10 h-full flex flex-col">
         <div className="flex justify-between items-start mb-4">
           <div>
-            <span className="text-xs font-semibold text-indigo-300 uppercase tracking-wider flex items-center">
-              <ClockIcon className="h-3 w-3 mr-1" /> {deal.timeLeft}
+            <span className="text-xs font-semibold text-[#000000] uppercase tracking-wider flex items-center">
+              <ClockIcon className="h-3 w-3 mr-1 text-[#000000]" /> {deal.timeLeft}
             </span>
-            <h3 className="text-2xl font-bold mt-2">{deal.title}</h3>
+            <h3 className="text-2xl font-bold mt-2 text-amber-500">{deal.title}</h3>
           </div>
           <motion.div
             className="bg-amber-400/90 text-indigo-900 px-4 py-2 rounded-full text-lg font-bold shadow-md"
@@ -51,19 +51,19 @@ const DealCard = ({ deal, index }) => {
           </motion.div>
         </div>
 
-        <p className="text-indigo-100 mb-6 flex-grow">{deal.description}</p>
+        <p className="text-[#000000] mb-6 flex-grow">{deal.description}</p>
 
         <div className="space-y-4 mb-6">
           <motion.div
-            className="bg-indigo-700/50 rounded-xl p-4 backdrop-blur-sm"
+            className="bg-[#000] rounded-xl p-4 backdrop-blur-sm"
             whileHover={{ scale: 1.01 }}
           >
             <div className="flex items-center justify-between">
               <span className="font-mono flex items-center gap-2 text-indigo-200">
-                <TagIcon className="h-5 w-5" /> {deal.code}
+                <TagIcon className="h-5 w-5 text-indigo-200" /> {deal.code}
               </span>
               <button
-                className="text-indigo-300 hover:text-white transition-colors"
+                className="text-indigo-200 hover:text-white transition-colors"
                 onClick={() => navigator.clipboard.writeText(deal.code)}
                 aria-label="Copy code"
               >
@@ -107,7 +107,7 @@ const DealCard = ({ deal, index }) => {
             scale: 0.98,
             boxShadow: "0 5px 15px -5px rgba(245, 158, 11, 0.2)",
           }}
-          className="w-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-indigo-900 py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 relative overflow-hidden"
+          className="w-full bg-linear-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-indigo-900 py-3 rounded-xl font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 relative overflow-hidden"
           onClick={(e) => {
             e.stopPropagation();
 
@@ -192,7 +192,7 @@ const Deals = () => {
   ];
 
   return (
-    <section className="py-16 bg-linear-to-b from-indigo-900 to-indigo-950">
+    <section className="py-16 bg-linear-to-b from-gray-900 to-gray-800">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -226,7 +226,7 @@ const Deals = () => {
           transition={{ delay: 0.4 }}
           className="text-center mt-16"
         >
-          <p className="text-indigo-400 mb-6">More deals coming soon...</p>
+          <p className="text-indigo-300 mb-6">More deals coming soon...</p>
           <Link to={"/deals"}>
             <button className="px-8 py-3 border-2 border-indigo-600 text-indigo-300 hover:bg-indigo-800/50 rounded-xl font-medium transition-all">
               View All Offers
